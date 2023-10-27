@@ -5,15 +5,15 @@ import config
 COLUMNS = {
     "Solved probSAT": "sum",
     "Solved GSAT": "sum",
-    "Awg fined steps probSAT": "avg",
-    "Awg fined steps GSAT": "avg",
-    "Awg steps of solved probSAT": "avg",
-    "Awg steps of solved GSAT": "avg"
+    "Avg fined steps probSAT": "avg",
+    "Avg fined steps GSAT": "avg",
+    "Avg steps of solved probSAT": "avg",
+    "Avg steps of solved GSAT": "avg"
 }
 
 
 def print_results_for_file(filepath):
-    df = pd.read_csv(filepath, delimiter=";")
+    df = pd.read_csv(filepath, delimiter=config.DELIMITER)
     filename = os.path.basename(filepath)
     directory = os.path.dirname(filepath)
 
@@ -27,7 +27,7 @@ def print_results_for_file(filepath):
 
 
 def main():
-    for directory in [f"{config.RESULTS}/{set_name}" for set_name in config.SETS]:
+    for directory in [f"{config.MERGED}/{set_name}" for set_name in config.SETS]:
         for filename in os.listdir(directory):
             filepath = os.path.join(directory, filename)
             print_results_for_file(filepath)
