@@ -1,0 +1,12 @@
+ROOT_DIR = "./.."
+RESULTS = f"{ROOT_DIR}/results"
+MERGED = f"{RESULTS}/merged/"
+OUTPUT_DIR = f"{ROOT_DIR}/plots/"
+SETS = ["uf20-91R_SET", "uf50-218R_SET", "uf75-325_SET"]
+COLUMNS_CDF = ['Avg fined steps GSAT', 'Avg fined steps probSAT']
+COLUMNS_LOGNORMAL = ['Avg steps of solved GSAT', 'Avg steps of solved probSAT']
+DELIMITER = ';'
+REPS = 500
+BAR_WIDTH_HISTOGRAM = 0.1
+COLUMNS_HISTOGRAM = ['Solved GSAT', 'Solved probSAT', 'Total']
+COLORS = ['#89CFF0', '#FF6B6B']
